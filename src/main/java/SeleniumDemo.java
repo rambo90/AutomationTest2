@@ -9,8 +9,6 @@ import static java.lang.Thread.sleep;
 
 public class SeleniumDemo {
     public static void main(String[] args) throws Exception {
-
-
         String property = System.getProperty("user.dir") + "/driver/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", property);
         WebDriver driver = new ChromeDriver();
@@ -34,7 +32,7 @@ public class SeleniumDemo {
             sleep(1000);
             driver.navigate().refresh();
             String after = driver.getTitle();
-            if (after.equals(before) == false) {
+            if (!after.equals(before)) {
                 System.out.println("Другая страница");
             }
             sleep(1000);
