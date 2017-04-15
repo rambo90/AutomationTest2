@@ -2,15 +2,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.List;
-
 import static java.lang.Thread.sleep;
 
 public class SeleniumDemo {
     public static void main(String[] args) throws Exception {
-
-
         String property = System.getProperty("user.dir") + "/driver/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", property);
         WebDriver driver = new ChromeDriver();
